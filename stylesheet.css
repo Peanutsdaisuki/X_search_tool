@@ -1,0 +1,104 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color: #f4f4f4;
+  margin: 0;
+  font-size: 16px; /* ページ全体のフォントサイズを大きく */
+}
+
+.container {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 20px auto; /* 上下のマージンをautoに設定して水平方向に真ん中に配置 */
+}
+
+h1 {
+  color: #333;
+  font-size: 24px; /* 見出しのフォントサイズを大きく */
+}
+
+.input-container{
+  white-space: nowrap;
+}
+
+.input-container,
+.result-container-wrapper,
+.result-container {
+  width: 50%;
+  margin: 10px auto; /* 上下のマージンをautoに設定して水平方向に真ん中に配置 */
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+  color: #555;
+  font-size: 16px; /* ラベルのフォントサイズを大きく */
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px; /* 入力欄とセレクトボックスのパディングを大きく */
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px; /* 入力欄とセレクトボックスのフォントサイズを大きく */
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: #3498db;
+  color: #fff;
+  margin-right: 10px;
+  font-size: 16px;
+}
+
+
+
+.result-container-wrapper {
+  border: none; /* 枠をなくす */
+  padding: 10px;
+  background-color: #f4f4f4; /* 背景色を変更 */
+}
+
+.result-container {
+  border: 1px solid #ccc;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+#resultText {
+  color: #333;
+  font-size: 18px; /* 結果テキストのフォントサイズを大きく */
+}
+
+.explore-link {
+  color: #3498db; /* 青色のカラーコード */
+  cursor: pointer;
+  font-size: 20px; /* フォントサイズを大きく */
+  font-weight: bold; /* 太い文字にする */
+  border: 2px solid #3498db; /* 四角で囲む */
+  padding: 10px; /* 内側の余白 */
+  display: inline-block; /* インラインブロックとして配置 */
+  border-radius: 5px; /* 角を丸くする */
+}
+
+.clear-button-wrapper button {
+  background-color: #B1221A; /* 赤色 */
+  color: #fff; /* テキストの色を白に */
+}
+
+.clear-button-wrapper button:hover {
+  background-color: #AF011C; /* ホバー時の色を濃い赤に */
+}
+
+.explore-link:hover {
+  text-decoration: underline;
+}
