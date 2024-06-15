@@ -13,21 +13,35 @@
 
     <div class="input-container">
       <label for="usernameInput">次のアカウントが送信</label>
-      <input type="text" id="usernameInput" oninput="updateResult()" maxlength="15">
+      <div class="input-wrapper">
+        <span class="input-prefix">@</span>
+        <input type="text" id="usernameInput" oninput="updateResult()" maxlength="15">
+      </div>
     </div>
 
     <div class="input-container">
       <label for="tousernameInput">次のアカウント宛て</label>
-      <input type="text" id="tousernameInput" oninput="updateResult()" maxlength="15">
+      <div class="input-wrapper">
+        <span class="input-prefix">@</span>
+        <input type="text" id="tousernameInput" oninput="updateResult()" maxlength="15">
+      </div>
     </div>
 
     <div class="input-container">
-      <label for="numberInput1">いいねの最小件数: <span id="likeCheckbox" onclick="toggleCheckbox('likeCheckbox')">✅</span></label>
+      <label for="numberInput1">いいねの最小件数:</label>
+      <label class="switch">
+        <input type="checkbox" id="likeCheckbox" onclick="updateResult()">
+        <span class="slider round"></span>
+      </label>
       <input type="number" id="numberInput1" oninput="updateResult()">
     </div>
 
     <div class="input-container">
-      <label for="numberInput2">リポストの最小件数: <span id="rtCheckbox" onclick="toggleCheckbox('rtCheckbox')">✅</span></label>
+      <label for="numberInput2">リポストの最小件数:</label>
+      <label class="switch">
+        <input type="checkbox" id="rtCheckbox" onclick="updateResult()">
+        <span class="slider round"></span>
+      </label>
       <input type="number" id="numberInput2" oninput="updateResult()">
     </div>
 
@@ -37,7 +51,11 @@
     </div>
 
     <div class="input-container">
-      <label for="repliesCheckbox">返信のみを表示: <span id="repliesCheckbox" onclick="toggleCheckbox('repliesCheckbox')">❌</span></label>
+      <label for="repliesCheckbox">返信のみを表示:</label>
+      <label class="switch">
+        <input type="checkbox" id="repliesCheckbox" onclick="updateResult()">
+        <span class="slider round"></span>
+      </label>
     </div>
     
     <div class="input-container">
