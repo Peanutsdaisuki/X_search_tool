@@ -8,95 +8,101 @@
 </head>
 <body>
 
-  <div class="container">
-    <h1>X(旧Twitter)検索ツール</h1>
+<div class="container">
+  <h1>X(旧Twitter)検索ツール</h1>
 
-    <div class="input-container">
-      <label for="usernameInput">次のアカウントが送信</label>
-      <div class="input-wrapper">
-        <span class="input-prefix">@</span>
-        <input type="text" id="usernameInput" oninput="updateResult()" maxlength="15">
-      </div>
+  <!-- 次のアカウントが送信 -->
+  <div class="input-container">
+    <label for="usernameInput">次のアカウントが送信</label>
+    <div class="input-wrapper">
+      <span class="input-prefix">@</span>
+      <input type="text" id="usernameInput" oninput="updateResult()" maxlength="15">
     </div>
+  </div>
 
-    <div class="input-container">
-      <label for="tousernameInput">次のアカウント宛て</label>
-      <div class="input-wrapper">
-        <span class="input-prefix">@</span>
-        <input type="text" id="tousernameInput" oninput="updateResult()" maxlength="15">
-      </div>
+  <!-- 次のアカウント宛て -->
+  <div class="input-container">
+    <label for="tousernameInput">次のアカウント宛て</label>
+    <div class="input-wrapper">
+      <span class="input-prefix">@</span>
+      <input type="text" id="tousernameInput" oninput="updateResult()" maxlength="15">
     </div>
+  </div>
 
-    <div class="input-container">
-      <label for="numberInput1">いいねの最小件数:</label>
-      <label class="switch">
-        <input type="checkbox" id="likeCheckbox" onclick="updateResult()">
-        <span class="slider round"></span>
-      </label>
-      <input type="number" id="numberInput1" oninput="updateResult()">
-    </div>
+  <!-- いいねの最小件数 -->
+  <div class="input-container">
+    <label for="numberInput1">いいねの最小件数:</label>
+    <label class="switch">
+      <input type="checkbox" id="likeCheckbox" onclick="updateResult()">
+      <span class="slider round"></span>
+    </label>
+    <input type="number" id="numberInput1" oninput="updateResult()">
+  </div>
 
-    <div class="input-container">
-      <label for="numberInput2">リポストの最小件数:</label>
-      <label class="switch">
-        <input type="checkbox" id="rtCheckbox" onclick="updateResult()">
-        <span class="slider round"></span>
-      </label>
-      <input type="number" id="numberInput2" oninput="updateResult()">
-    </div>
+  <!-- リポストの最小件数 -->
+  <div class="input-container">
+    <label for="numberInput2">リポストの最小件数:</label>
+    <label class="switch">
+      <input type="checkbox" id="rtCheckbox" onclick="updateResult()">
+      <span class="slider round"></span>
+    </label>
+    <input type="number" id="numberInput2" oninput="updateResult()">
+  </div>
 
-    <div class="input-container">
-      <label for="exactMatchInput">キーワード完全一致:</label>
-      <input type="text" id="exactMatchInput" oninput="updateResult()">
-    </div>
+  <!-- キーワード完全一致 -->
+  <div class="input-container">
+    <label for="exactMatchInput">キーワード完全一致:</label>
+    <input type="text" id="exactMatchInput" oninput="updateResult()">
+  </div>
 
-    <div class="input-container">
-      <label for="repliesCheckbox">返信のみを表示:</label>
-      <label class="switch">
-        <input type="checkbox" id="repliesCheckbox" onclick="updateResult()">
-        <span class="slider round"></span>
-      </label>
-    </div>
-    
-    <div class="input-container">
-      <label for="languageSelect">言語:</label>
-      <select id="languageSelect" onchange="updateResult()">
-        <option value="">なし</option>
-        <option value="ja">日本語</option>
-        <option value="en">英語</option>
-        <option value="zh">中国語</option>
-        <option value="ko">韓国語</option>
-        <option value="fr">フランス語</option>
-        <option value="ru">ロシア語</option>
-        <option value="ar">アラビア語</option>
-              </select>
-    </div>
-    
-   <!-- コピーボタン -->
-    <div class="copy-button-wrapper">
-      <button onclick="copyToClipboard()">クリップボードにコピー</button>
-    </div>
-    
+  <!-- 返信のみを表示 -->
+  <div class="input-container">
+    <label for="repliesCheckbox">返信のみを表示:</label>
+    <label class="switch">
+      <input type="checkbox" id="repliesCheckbox" onclick="updateResult()">
+      <span class="slider round"></span>
+    </label>
+  </div>
+
+  <!-- 言語 -->
+  <div class="input-container">
+    <label for="languageSelect">言語:</label>
+    <select id="languageSelect" onchange="updateResult()">
+      <option value="">なし</option>
+      <option value="ja">日本語</option>
+      <option value="en">英語</option>
+      <option value="zh">中国語</option>
+      <option value="ko">韓国語</option>
+      <option value="fr">フランス語</option>
+      <option value="ru">ロシア語</option>
+      <option value="ar">アラビア語</option>
+    </select>
+  </div>
+
+  <!-- コピーボタン -->
+  <div class="copy-button-wrapper">
+    <button onclick="copyToClipboard()">クリップボードにコピー</button>
+  </div>
+
   <!-- 結果を表示するコンテナ -->
   <div class="result-container-wrapper">
     <p>出力結果:</p>
     <div class="result-container">
       <p id="resultText"></p>
     </div>
-  </div> 
+  </div>
 
   <!-- リンク -->
-    <p class="explore-link" onclick="openExplorePage()">ここを押したら検索ページに飛びます。</p>
+  <p class="explore-link" onclick="openExplorePage()">ここを押したら検索ページに飛びます。</p>
 
   <!-- 結果をクリアするボタン -->
   <div class="clear-button-wrapper">
     <button onclick="clearResult()">クリア</button>
   </div>
 
-  </div>
+</div>
 
-
-  <script src="script.js"></script>
+<script src="script.js"></script>
 
 </body>
 </html>
