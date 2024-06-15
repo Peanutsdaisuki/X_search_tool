@@ -20,15 +20,91 @@ h1 {
   font-size: 24px; /* 見出しのフォントサイズを大きく */
 }
 
-.input-container{
-  white-space: nowrap;
+.input-container {
+  margin: 20px;
+  display: flex;
+  align-items: center; /* 垂直方向に中央揃え */
+  justify-content: space-between; /* 子要素を左右に配置 */
 }
 
-.input-container,
-.result-container-wrapper,
-.result-container {
-  width: 50%;
-  margin: 10px auto; /* 上下のマージンをautoに設定して水平方向に真ん中に配置 */
+/* スイッチボタンのスタイル */
+.switch {
+  position: absolute;
+  display: inline-block;
+  width: 34px; /* 幅を調整 */
+  height: 20px; /* 高さを調整 */
+  margin-right: 10px; /* スイッチと入力フィールドの間隔を調整 */
+}
+
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 20px;
+  width: 30px; /* 幅を調整 */
+  height: 18px; /* 高さを調整 */
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px; /* スライダーの高さを調整 */
+  width: 14px; /* スライダーの幅を調整 */
+  left: 3px;
+  bottom: 2px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(10px); /* スライダーの移動距離を調整 */
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.input-prefix {
+  background-color: #f4f4f4;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-right: none;
+  border-radius: 5px 0 0 5px;
+  color: #888;
+  font-size: 16px;
+}
+
+.input-wrapper input {
+  flex: 1; /* 残りのスペースを入力フィールドが占める */
+  padding: 12px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  border-radius: 0 5px 5px 0;
+  font-size: 16px;
+}
+
+.input-container label {
+  flex: 0 0 200px; /* 固定幅を設定 */
+  text-align: right; /* ラベルを右揃え */
+  margin-right: 20px; /* ラベルと入力フィールドの間隔 */
 }
 
 label {
@@ -59,7 +135,14 @@ button {
   font-size: 16px;
 }
 
+.clear-button-wrapper button {
+  background-color: #B1221A; /* 赤色 */
+  color: #fff; /* テキストの色を白に */
+}
 
+.clear-button-wrapper button:hover {
+  background-color: #AF011C; /* ホバー時の色を濃い赤に */
+}
 
 .result-container-wrapper {
   border: none; /* 枠をなくす */
@@ -88,15 +171,6 @@ button {
   padding: 10px; /* 内側の余白 */
   display: inline-block; /* インラインブロックとして配置 */
   border-radius: 5px; /* 角を丸くする */
-}
-
-.clear-button-wrapper button {
-  background-color: #B1221A; /* 赤色 */
-  color: #fff; /* テキストの色を白に */
-}
-
-.clear-button-wrapper button:hover {
-  background-color: #AF011C; /* ホバー時の色を濃い赤に */
 }
 
 .explore-link:hover {
