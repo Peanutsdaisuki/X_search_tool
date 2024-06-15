@@ -172,7 +172,3 @@ button {
   display: inline-block; /* インラインブロックとして配置 */
   border-radius: 5px; /* 角を丸くする */
 }
-
-.explore-link:hover {
-  text-decoration: underline;
-}
