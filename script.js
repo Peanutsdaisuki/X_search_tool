@@ -1,10 +1,3 @@
-// チェックボックスの状態を切り替える関数
-function toggleCheckbox(checkboxId) {
-  var checkbox = document.getElementById(checkboxId);
-  checkbox.textContent = (checkbox.textContent === '✅') ? '❌' : '✅';
-  updateResult();
-}
-
 // 新しいタブで検索ページに飛ぶ関数
 function openExplorePage() {
   var resultText = document.getElementById('resultText').textContent;
@@ -32,9 +25,9 @@ function updateResult() {
   var selectedLanguage = document.getElementById('languageSelect').value;
 
   // チェックボックスの状態を取得
-  var likeCheckboxState = document.getElementById('likeCheckbox').textContent === '✅';
-  var rtCheckboxState = document.getElementById('rtCheckbox').textContent === '✅';
-  var repliesCheckboxState = document.getElementById('repliesCheckbox').textContent === '✅';
+  var likeCheckboxState = document.getElementById('likeCheckbox').checked;
+  var rtCheckboxState = document.getElementById('rtCheckbox').checked;
+  var repliesCheckboxState = document.getElementById('repliesCheckbox').checked;
 
   // 結果を表示する要素を取得
   var resultTextElement = document.getElementById('resultText');
@@ -106,6 +99,11 @@ function clearResult() {
   document.getElementById('usernameInput').value = '';
   document.getElementById('tousernameInput').value = '';
   document.getElementById('exactMatchInput').value = '';
+
+  // チェックボックスをクリア
+  document.getElementById('likeCheckbox').checked = false;
+  document.getElementById('rtCheckbox').checked = false;
+  document.getElementById('repliesCheckbox').checked = false;
 
   // 結果をクリア
   resultTextElement.textContent = '';
