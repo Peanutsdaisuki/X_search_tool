@@ -21,6 +21,47 @@ h1 {
   font-size: 24px;
 }
 
+/* サイトの説明ボタンのスタイル */
+.description-toggle {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 16px;
+}
+
+/* 説明コンテンツのスタイル */
+.description-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease, padding 0.3s ease;
+  background-color: #f4f4f4;
+  border: 1px solid #ccc;
+  padding: 0 20px;
+  border-radius: 5px;
+  margin-top: 10px;
+  text-align: left;
+}
+
+.description-content ul li {
+  font-size: 14px; /* テキストサイズを少し小さくする */
+}
+
+
+/* 説明コンテンツが表示された際のスタイル */
+.description-content.open {
+  max-height: 200px;
+  padding: 15px 20px;
+}
+
+.description-content ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
 .input-container {
   margin: 20px 0;
   display: flex;
