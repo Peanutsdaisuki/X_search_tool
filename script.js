@@ -12,8 +12,8 @@ function openExplorePage() {
 
 // 説明欄の表示・非表示を切り替える関数
 function toggleDescription() {
-    const description = document.getElementById('descriptionContent');
-    description.classList.toggle('open');
+    const descriptionContent = document.getElementById('descriptionContent');
+    descriptionContent.classList.toggle('open'); 
   }
 
 // ユーザー名を入力する欄の値を取得して結果を更新する関数
