@@ -11,6 +11,22 @@
 <div class="container">
   <h1>X(旧Twitter)検索ツール</h1>
 
+  <!-- サイトの説明ボタン -->
+  <button class="description-toggle" onclick="toggleDescription()">このサイトの説明</button>
+  <div class="description-content" id="descriptionContent">
+    <ul>
+      <li>次のアカウントが送信:検索対象となるユーザー名を入力してください。</li>
+      <li>次のアカウント宛て:特定のアカウント宛のポストを検索します。</li>
+      <li>いいねの最小件数:入力したいいね数以上のポストを検索します。</li>
+      <li>リポストの最小件数:入力したリポスト数以上のポストを検索します。</li>
+      <li>キーワードの完全一致:指定したキーワードが含まれるポストを検索します。</li>
+      <li>返信のみを表示:返信ポストのみを表示します。</li>
+      <li>言語:特定の言語でのポストを検索します。</li>
+      <li>アカウント名を検索するときはアットマークは入力しないでください。</li>
+      <li>いいねとリポストの最小件数を使うときはボタンをクリックし、青にしてください。</li>
+    </ul>
+  </div>
+
   <!-- 次のアカウントが送信 -->
   <div class="input-container">
     <label for="usernameInput">次のアカウントが送信</label>
@@ -104,11 +120,10 @@
     <button onclick="clearResult()">クリア</button>
   </div>
 
-  <iframe width="420" height="300" src="https://www.youtube.com/embed/b64BEVoS2c4" title="X(旧Twitter)検索ツールの使い方" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-
 </div>
 
 <script src="script.js"></script>
 
 </body>
 </html>
+
