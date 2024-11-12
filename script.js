@@ -10,6 +10,12 @@ function openExplorePage() {
   }
 }
 
+// 説明欄の表示・非表示を切り替える関数
+function toggleDescription() {
+    const description = document.getElementById('descriptionContent');
+    description.classList.toggle('open');
+  }
+
 // ユーザー名を入力する欄の値を取得して結果を更新する関数
 function updateResult() {
   // ユーザー名を取得
@@ -110,4 +116,7 @@ function clearResult() {
 
   // コピー可能なテキストもクリア
   resultTextElement.removeAttribute('data-clipboard-text');
+
+
+
 }
