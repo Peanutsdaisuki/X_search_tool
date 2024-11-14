@@ -38,7 +38,7 @@ h1 {
   max-height: none; /* 高さを固定しない */
   height: auto; /* 内容に応じて高さを自動調整 */
   overflow: hidden; /* 内容がはみ出るのを防ぐ */
-  transition: padding 0.3s ease; /* アニメーション */
+  transition: padding 0.3s ease; 
   background-color: #f4f4f4;
   border: 1px solid #ccc;
   padding: 0 20px;
@@ -49,7 +49,7 @@ h1 {
 }
 
 .description-content ul li {
-  font-size: block; /* テキストサイズを少し小さくする */
+  font-size: block; /* テキストサイズを小さくする */
 }
 
 
@@ -184,7 +184,7 @@ h1 {
   display: flex;
   align-items: center;
   width: 100%;
-  max-width: 300px; /* 入力フィールドの最大幅を設定 */
+  max-width: 300px;
   margin-top: 5px; /* 入力フィールドとラベルの間隔 */
 }
 
